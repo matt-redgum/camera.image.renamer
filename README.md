@@ -19,7 +19,7 @@ C:\Photos\MyBirthday-2018\MyBirthday-2018-8874wb.MOV
 
 ## Usage
 
-`camera.image.renamer.exe [options] {filepath}`
+`dotnet camera.image.renamer.dll [options] {filepath}`
 
 ## Command Line Options
 
@@ -41,8 +41,8 @@ DSC_*.JPG
 ## Examples
 
 Copy files to a new name, processing the provided directory and all sub directories  
-`camera.image.renamer.exe --recurse --copyandrename C:\path\to\photos\`
+`dotnet camera.image.renamer.dll --recurse --copyandrename C:\path\to\photos\`
 
 Rename only files that match the mask `IMG_*.JPG` 
 
-`camera.image.renamer.exe --recurse --filters IMG_*.JPG C:\path\to\photos\`
+`dotnet camera.image.renamer.dll --recurse --filters IMG_*.JPG C:\path\to\photos\`
