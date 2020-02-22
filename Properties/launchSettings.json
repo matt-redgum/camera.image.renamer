@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Camera.Image.Renamer": {
+      "commandName": "Project",
+      "commandLineArgs": "--recurse --test --filters IMG_*.JPG D:\\Temp\\image.renamer\\testfiles\\Balaklava-SA-2017"
+    }
+  }
+}
