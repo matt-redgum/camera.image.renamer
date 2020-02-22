@@ -40,9 +40,14 @@ DSC_*.JPG
 
 ## Examples
 
-Copy files to a new name, processing the provided directory and all sub directories  
+Copy files to a new name, processing the provided directory and all sub directories
+
 `dotnet camera.image.renamer.dll --recurse --copyandrename C:\path\to\photos\`
 
-Rename only files that match the mask `IMG_*.JPG` 
+Rename only files that match the mask `IMG_*.JPG`, processing all subdirectories
 
 `dotnet camera.image.renamer.dll --recurse --filters IMG_*.JPG C:\path\to\photos\`
+
+Test process the folder to see what would be renamed, but don't actually rename the file. Only files that match the mask `IMG_*.JPG` should be processed, and process all subdirectories
+
+`dotnet camera.image.renamer.dll --recurse --filters IMG_*.JPG --test C:\path\to\photos\`
