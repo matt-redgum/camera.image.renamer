@@ -99,9 +99,10 @@ namespace Camera.Image.Renamer
                 ProcessFolder(options.SourcePath, options);
             }
 
-#if DEBUG
-            Console.ReadKey();
-#endif
+            if (System.Diagnostics.Debugger.IsAttached)
+            {
+                Console.ReadKey();
+            }
         }
 
 
@@ -166,7 +167,8 @@ namespace Camera.Image.Renamer
                 try
                 {
                     Console.WriteLine("Copying file {0} to {1}", fileName, newFileName);
-                    if (!options.TestOnly) { 
+                    if (!options.TestOnly)
+                    {
                         System.IO.File.Copy(fileName, newPath);
                     }
                 }
