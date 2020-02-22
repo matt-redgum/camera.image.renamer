@@ -23,7 +23,16 @@ C:\Photos\MyBirthday-2018\MyBirthday-2018-8874wb.MOV
 
 ## Command Line Options
 
-`--filters` or `-f` : comma separated set of file filters. Defaults to standard file masks, but can be regular expressions with the use of the `--regex-filter` option
+`--filters` or `-f` : comma separated set of file filters. Defaults to standard file masks, but can be regular expressions with the use of the `--regex-filters` option  
+If no filters are provided, the following default filters are used:
+```
+IMG_*.JPG
+IMG_*.MOV
+DSC_*.JPG
+{Guid}.JPG
+```
+
+`--regex-filters` or `-x` : Indicates that the provided filters are regex filters rather than standard file masks
 
 `--copyandrename` or `-c` : Copies the files in place with the new name, leaving the original file as-is.
 
@@ -31,4 +40,9 @@ C:\Photos\MyBirthday-2018\MyBirthday-2018-8874wb.MOV
 
 ## Examples
 
-`camera.image.renamer.exe --recurse --copyandrename [options] C:\path\to\photos\`
+Copy files to a new name, processing the provided directory and all sub directories  
+`camera.image.renamer.exe --recurse --copyandrename C:\path\to\photos\`
+
+Rename only files that match the mask `IMG_*.JPG` 
+
+`camera.image.renamer.exe --recurse --filters IMG_*.JPG C:\path\to\photos\`
